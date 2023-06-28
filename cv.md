@@ -18,3 +18,13 @@
 **Self-study:** While I don't have work experience, I have been actively engaged in enhancing my skills in front-end development. I have been taking various online courses on platforms like Udemy and watching educational videos on YouTube. These resources have helped me gain practical knowledge and hands-on experience in HTML, CSS, JavaScript, and other relevant technologies. I have been working on personal projects to apply what I have learned and improve my proficiency.
 
 ## Skills
+
+- HTML
+- CSS (Preprocessor SCSS, BEM methodology).
+- JavaScript (Fundamentals,Functional Programming, OOP, Asynchronous JavaScript+-, ES6+,DOM,JSON).
+- Version control: Git (remote service GitHub).
+- Module Bundlers: Gulp, Webpack.
+- C++ (basic knowledge), Python(basic knowledge), SQLite3(basic knowledge), PHP(basic knowledge) MySQL(basic knowledge)
+- Windows OS
+- Figma, Avacode, Zeplin, Inspect, Adobe Photoshop, (for web development)
+- Editors: VSCode.
