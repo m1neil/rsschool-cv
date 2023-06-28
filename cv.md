@@ -16,3 +16,5 @@
 **Strengths:** I'm highly self-motivated and take initiative to learn and explore new concepts independently. I pay great attention to detail, ensuring that my work is precise and of high quality. I'm a collaborative team player and believe in effective communication and cooperation to achieve common goals.
 
 **Self-study:** While I don't have work experience, I have been actively engaged in enhancing my skills in front-end development. I have been taking various online courses on platforms like Udemy and watching educational videos on YouTube. These resources have helped me gain practical knowledge and hands-on experience in HTML, CSS, JavaScript, and other relevant technologies. I have been working on personal projects to apply what I have learned and improve my proficiency.
+
+## Skills
