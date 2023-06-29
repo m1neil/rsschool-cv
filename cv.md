@@ -31,46 +31,16 @@
 
 ## Code
 
-`
-export default function tabs(selector, itemStorage = 'index') {
-if (selector.length) {
-const tabsContainer = document.querySelector(selector);
-if (tabsContainer) {
+```
+function burgerAndMenuController() {
+	const burger = document.querySelector('.burger'),
+		menu = document.querySelector('.menu__body');
 
-    	const navMenuLink = tabsContainer.querySelectorAll('.tabs**link-tab'),
-    			tabs = tabsContainer.querySelectorAll('.tabs**tab');
-
-    		checkLocalStorageTabs();
-
-    		navMenuLink.forEach((link, index) => {
-    			link.addEventListener("click", function (e) {
-    				e.preventDefault();
-    				deleteClassActive();
-    				console.log(index);
-    				addClassActive(index);
-    				localStorage.setItem(`${itemStorage}`, index);
-    			});
-    		});
-
-    		function deleteClassActive() {
-    			navMenuLink.forEach(item => item.classList.remove('active'));
-    			tabs.forEach(tab => tab.classList.remove('active'));
-    		}
-
-    		function addClassActive(tabIndex = 0) {
-    			navMenuLink[tabIndex].classList.add('active');
-    			tabs[tabIndex].classList.add('active');
-    		}
-
-    		function checkLocalStorageTabs() {
-    			if (localStorage.getItem(`${itemStorage}`)) {
-    				addClassActive(localStorage.getItem(`${itemStorage}`))
-    			} else {
-    				addClassActive();
-    			}
-    		}
-    	}
-    }
-
+	burger.addEventListener('click', () => {
+		burger.classList.toggle('menu-open');
+		menu.classList.toggle('menu-open');
+		document.body.classList.toggle('lock');
+	});
 }
-`
+
+```
