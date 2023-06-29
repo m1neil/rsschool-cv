@@ -21,10 +21,12 @@
 
 - HTML
 - CSS (Preprocessor SCSS, BEM methodology).
-- JavaScript (Fundamentals,Functional Programming, OOP, Asynchronous JavaScript+-, ES6+,DOM,JSON).
+- JavaScript (Fundamentals, Functional Programming, OOP, Asynchronous JavaScript+-, ES6+,DOM,JSON).
 - Version control: Git (remote service GitHub).
 - Module Bundlers: Gulp, Webpack.
 - C++ (basic knowledge), Python(basic knowledge), SQLite3(basic knowledge), PHP(basic knowledge) MySQL(basic knowledge)
 - Windows OS
 - Figma, Avacode, Zeplin, Inspect, Adobe Photoshop, (for web development)
 - Editors: VSCode.
+
+## Code
