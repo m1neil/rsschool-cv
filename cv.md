@@ -30,3 +30,63 @@
 - Editors: VSCode.
 
 ## Code
+
+`
+function setClock(selector, deadline) {
+const timer = document.querySelector(selector),
+days = timer.querySelector('#days'),
+hours = timer.querySelector('#hours'),
+minutes = timer.querySelector('#minutes'),
+seconds = timer.querySelector('#seconds'),
+timerInterval = setInterval(updateTimer, 1000);
+
+    updateTimer();
+
+    function updateTimer() {
+    	const time = countingTime(deadline);
+    	days.textContent = addZero(time.days);
+    	hours.textContent = addZero(time.hours);
+    	minutes.textContent = addZero(time.minutes);
+    	seconds.textContent = addZero(time.seconds);
+
+    	if (time.milliseconds <= 0) {
+    		clearInterval(timerInterval)
+    	}
+    }
+
+}
+
+function countingTime(deadline) {
+const milliseconds = Date.parse(deadline) - Date.parse(new Date());
+
+    let days = 0,
+    	hours = 0,
+    	minutes = 0,
+    	seconds = 0;
+
+    if (milliseconds > 0) {
+    	days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+    	hours = Math.floor(milliseconds / (1000 * 60 * 60) % 24);
+    	minutes = Math.floor((milliseconds / 1000 / 60) % 60);
+    	seconds = Math.floor((milliseconds / 1000) % 60);
+    }
+
+    return {
+    	milliseconds,
+    	days,
+    	hours,
+    	minutes,
+    	seconds
+    }
+
+};
+
+function addZero(value) {
+if (value >= 0 && value < 10) {
+return `0${value}`
+} else {
+return value;
+}
+}
+
+`
