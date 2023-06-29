@@ -31,62 +31,44 @@
 
 ## Code
 
-`
-function setClock(selector, deadline) {
-const timer = document.querySelector(selector),
-days = timer.querySelector('#days'),
-hours = timer.querySelector('#hours'),
-minutes = timer.querySelector('#minutes'),
-seconds = timer.querySelector('#seconds'),
-timerInterval = setInterval(updateTimer, 1000);
+`export default function tabs(selector, itemStorage = 'index') {
+console.log(selector.length);
+if (selector.length) {
+const tabsContainer = document.querySelector(selector);
+if (tabsContainer) {
+const navMenuLink = tabsContainer.querySelectorAll('.tabs**link-tab'),
+tabs = tabsContainer.querySelectorAll('.tabs**tab');
 
-    updateTimer();
+    		checkLocalStorageTabs();
 
-    function updateTimer() {
-    	const time = countingTime(deadline);
-    	days.textContent = addZero(time.days);
-    	hours.textContent = addZero(time.hours);
-    	minutes.textContent = addZero(time.minutes);
-    	seconds.textContent = addZero(time.seconds);
+    		navMenuLink.forEach((link, index) => {
+    			link.addEventListener("click", function (e) {
+    				e.preventDefault();
+    				deleteClassActive();
+    				console.log(index);
+    				addClassActive(index);
+    				localStorage.setItem(`${itemStorage}`, index);
+    			});
+    		});
 
-    	if (time.milliseconds <= 0) {
-    		clearInterval(timerInterval)
+    		function deleteClassActive() {
+    			navMenuLink.forEach(item => item.classList.remove('active'));
+    			tabs.forEach(tab => tab.classList.remove('active'));
+    		}
+
+    		function addClassActive(tabIndex = 0) {
+    			navMenuLink[tabIndex].classList.add('active');
+    			tabs[tabIndex].classList.add('active');
+    		}
+
+    		function checkLocalStorageTabs() {
+    			if (localStorage.getItem(`${itemStorage}`)) {
+    				addClassActive(localStorage.getItem(`${itemStorage}`))
+    			} else {
+    				addClassActive();
+    			}
+    		}
     	}
     }
 
-}
-
-function countingTime(deadline) {
-const milliseconds = Date.parse(deadline) - Date.parse(new Date());
-
-    let days = 0,
-    	hours = 0,
-    	minutes = 0,
-    	seconds = 0;
-
-    if (milliseconds > 0) {
-    	days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
-    	hours = Math.floor(milliseconds / (1000 * 60 * 60) % 24);
-    	minutes = Math.floor((milliseconds / 1000 / 60) % 60);
-    	seconds = Math.floor((milliseconds / 1000) % 60);
-    }
-
-    return {
-    	milliseconds,
-    	days,
-    	hours,
-    	minutes,
-    	seconds
-    }
-
-};
-
-function addZero(value) {
-if (value >= 0 && value < 10) {
-return `0${value}`
-} else {
-return value;
-}
-}
-
-`
+}`
