@@ -31,13 +31,14 @@
 
 ## Code
 
-`export default function tabs(selector, itemStorage = 'index') {
-console.log(selector.length);
+`
+export default function tabs(selector, itemStorage = 'index') {
 if (selector.length) {
 const tabsContainer = document.querySelector(selector);
 if (tabsContainer) {
-const navMenuLink = tabsContainer.querySelectorAll('.tabs**link-tab'),
-tabs = tabsContainer.querySelectorAll('.tabs**tab');
+
+    	const navMenuLink = tabsContainer.querySelectorAll('.tabs**link-tab'),
+    			tabs = tabsContainer.querySelectorAll('.tabs**tab');
 
     		checkLocalStorageTabs();
 
@@ -71,4 +72,5 @@ tabs = tabsContainer.querySelectorAll('.tabs**tab');
     	}
     }
 
-}`
+}
+`
