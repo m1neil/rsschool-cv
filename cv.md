@@ -42,5 +42,12 @@ function burgerAndMenuController() {
 		document.body.classList.toggle('lock');
 	});
 }
-
 ```
+
+## Education
+
+- **University:** Kharkiv National Automobile and Road University
+- **Courses:**
+  - [Udemy: Полный курс по JavaScript + React - с нуля до результата](https://www.udemy.com/course/javascript_full/)
+  - [Udemy: Практический JavaScript (Продвинутый уровень)](https://www.udemy.com/course/javascript_practice/)
+  - [Udemy: WEB-разработчик](https://www.udemy.com/course/webdeveloper/)
