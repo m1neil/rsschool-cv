@@ -1,45 +1,30 @@
-.header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 60px;
-	z-index: 50;
-	padding: 15px 0px;
-	background-color: #000;
-	// .header__container
+.promo {
+	// .promo__content
+	&__content {
+	}
+	// .promo__container
 	&__container {
-		display: flex;
-		align-items: center;
-		column-gap: 25px;
-		justify-content: space-between;
 	}
-	// .header__logo
-	&__logo {
+	// .promo__suptitle
+	&__suptitle {
 	}
-	// .header__menu
-	&__menu {
+	// .promo__title
+	&__title {
 	}
-	// .header__list
-	&__list {
-		display: flex;
-		justify-content: flex-end;
-		gap: 7px 12px;
-		flex-wrap: wrap;
+	// .promo__action
+	&__action {
 	}
-	// .header__item
-	&__item {
+	// .promo__btn
+	&__btn {
 	}
-	// .header__link
+	// .promo__link
 	&__link {
-		color: #fff;
-		font-weight: 500;
-		text-transform: uppercase;
-		transition: all 0.6s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: #ffa501;
-			}
-		}
 	}
+	// .promo__img
+	&__img {
+	}
+}
+.suptitle {
+}
+.title {
 }
