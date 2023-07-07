@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Подключение шрифтов
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,700&display=swap");
 
@@ -7,6 +9,9 @@ $fontSize: 14px; // где 14(px) - размер шрифта по умолча�
 
 // Основные цвета
 $mainColor: #000; // Цвет шрифта по умолчанию
+
+// Цвета элементов
+$elementColor: #ffa501;
 
 // Обнуление
 @import "null";
