@@ -1,12 +1,8 @@
 // Подключение шрифтов
-//&display=swap - добавить при подключении через плагин
-// &subset=cyrillic-ext - для кирилины
-
-// Подключить если есть локальные файлы шрифтов
-//@import "fonts/fonts";
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,700&display=swap");
 
 // Default font
-$fontFamily: "";
+$fontFamily: "Poppins";
 $fontSize: 14px; // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета
@@ -26,7 +22,7 @@ $mainColor: #000; // Цвет шрифта по умолчанию
 }
 
 [class*="__container"] {
-	max-width: 1170px;
+	max-width: 1135px;
 	margin: 0 auto;
 }
 
