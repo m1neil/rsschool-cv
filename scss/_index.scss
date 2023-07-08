@@ -8,18 +8,18 @@
 		z-index: 1;
 		color: #fff;
 	}
-	// .promo__container
-	&__container {
-	}
 	&__body {
 		max-width: 600px;
 	}
 	// .promo__suptitle
 	&__suptitle {
+		color: #fff;
 		margin-bottom: 13px;
 	}
 	// .promo__title
 	&__title {
+		color: #fff;
+		font-size: 48px;
 		&:not(:last-child) {
 			margin-bottom: 35px;
 		}
@@ -58,48 +58,96 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	// .promo__panel
-	&__panel {
-		position: absolute;
-		left: -90px;
-		top: 364px;
-		color: #fff;
-		display: flex;
-		align-items: center;
-		column-gap: 15px;
-		z-index: 2;
-		transform: rotate(-90deg);
-	}
-	// .promo__text
-	&__text {
-		position: relative;
-		color: #fff;
-		font-size: 16px;
-		font-weight: 700;
-		padding-right: 85px;
-		&::before {
-			content: "";
+	@media (min-width: 1360px) {
+		// .promo__panel
+		&__panel {
 			position: absolute;
-			top: 50%;
-			right: 0;
-			width: 70px;
-			height: 2px;
-			background-color: #fff;
-			transform: translateY(-50%);
+			left: -90px;
+			top: 364px;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			column-gap: 15px;
+			z-index: 2;
+			transform: rotate(-90deg);
+		}
+		// .promo__text
+		&__text {
+			position: relative;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			padding-right: 85px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 70px;
+				height: 2px;
+				background-color: #fff;
+				transform: translateY(-50%);
+			}
+		}
+		// .promo__social
+		&__social {
+			display: flex;
+			column-gap: 15px;
+		}
+		// .promo__item
+		&__item {
+			transition: transform 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
 		}
 	}
-	// .promo__social
-	&__social {
+}
+
+// .about-me
+.about-me {
+	padding: 90px 0 45px;
+	// .about-me__container
+	&__container {
 		display: flex;
-		column-gap: 15px;
+		column-gap: 70px;
 	}
-	// .promo__item
-	&__item {
-		transition: transform 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				// transform: scale(1.12);
-				transform: scale(1.2);
+	// .about-me__img
+	&__img {
+		flex: 0 0 35.24%;
+		position: relative;
+		padding-top: 52.87%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	// .about-me__content
+	&__content {
+	}
+	// .about-me__subtitle
+	&__suptitle {
+		margin-bottom: 16px;
+	}
+	// .about-me__title
+	&__title {
+		margin-bottom: 20px;
+	}
+	// .about-me__text
+	&__text {
+		p {
+			line-height: 1.5;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			span {
+				font-weight: 700;
 			}
 		}
 	}
