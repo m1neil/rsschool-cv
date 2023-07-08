@@ -100,7 +100,6 @@ h6 {
   color: #000;
   font-size: 16px;
   font-weight: 700;
-  padding-left: 10px;
   padding-top: 11px;
   text-align: center;
 }
@@ -205,11 +204,24 @@ h6 {
 }
 .promo__suptitle {
   color: #fff;
+  text-align: left;
+  padding-left: 10px;
   margin-bottom: 13px;
+}
+.promo__suptitle::after {
+  left: 0;
+  -webkit-transform: unset;
+      -ms-transform: unset;
+          transform: unset;
 }
 .promo__title {
   color: #fff;
   font-size: 48px;
+  text-align: left;
+  padding-bottom: 0;
+}
+.promo__title::before {
+  display: none;
 }
 .promo__title:not(:last-child) {
   margin-bottom: 35px;
@@ -344,6 +356,7 @@ h6 {
 .about-me__suptitle {
   margin-bottom: 16px;
   text-align: left;
+  padding-left: 10px;
 }
 .about-me__suptitle::after {
   left: 0;
@@ -491,4 +504,43 @@ h6 {
 .useful-experience__descr {
   font-size: 12px;
   line-height: 1.3;
+}
+
+.skills {
+  padding: 45px 0;
+}
+.skills__suptitle {
+  margin-bottom: 15px;
+}
+.skills__title {
+  margin-bottom: 60px;
+}
+.skills__items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(270px, 1fr));
+  grid-auto-rows: minmax(270px, auto);
+  gap: 18.1px;
+}
+.skills__items:not(:last-child) {
+  margin-bottom: 60px;
+}
+.skills__item {
+  padding: 29px;
+  border: 1px solid #000;
+}
+.skills__img {
+  margin-bottom: 20px;
+}
+.skills__subject {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.skills__descr {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.skills__code {
+  padding: 15px;
+  background-color: #d4d4d4;
 }

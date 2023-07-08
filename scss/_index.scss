@@ -14,12 +14,23 @@
 	// .promo__suptitle
 	&__suptitle {
 		color: #fff;
+		text-align: left;
+		padding-left: 10px;
 		margin-bottom: 13px;
+		&::after {
+			left: 0;
+			transform: unset;
+		}
 	}
 	// .promo__title
 	&__title {
 		color: #fff;
 		font-size: 48px;
+		text-align: left;
+		padding-bottom: 0;
+		&::before {
+			display: none;
+		}
 		&:not(:last-child) {
 			margin-bottom: 35px;
 		}
@@ -135,6 +146,7 @@
 	&__suptitle {
 		margin-bottom: 16px;
 		text-align: left;
+		padding-left: 10px;
 		&::after {
 			left: 0;
 			transform: unset;
@@ -288,5 +300,56 @@
 	&__descr {
 		font-size: 12px;
 		line-height: 1.3;
+	}
+}
+
+// .skills
+.skills {
+	padding: 45px 0;
+	// .skills__container
+	&__container {
+	}
+	// .skills__suptitle
+	&__suptitle {
+		margin-bottom: 15px;
+	}
+	// .skills__title
+	&__title {
+		margin-bottom: 60px;
+	}
+	// .skills__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(270px, 1fr));
+		grid-auto-rows: minmax(270px, auto);
+		gap: 18.1px;
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+	// .skills__item
+	&__item {
+		padding: 29px;
+		border: 1px solid #000;
+	}
+	// .skills__img
+	&__img {
+		margin-bottom: 20px;
+	}
+	// .skills__subject
+	&__subject {
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	// .skills__descr
+	&__descr {
+		font-size: 12px;
+		line-height: 1.3;
+		font-weight: 500;
+	}
+	// .skills__code
+	&__code {
+		padding: 15px;
+		background-color: #d4d4d4;
 	}
 }
