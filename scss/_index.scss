@@ -1,6 +1,7 @@
 .promo {
 	position: relative;
 	padding-top: 210px;
+	padding-bottom: 25px;
 	min-height: 100vh;
 	// .promo__content
 	&__content {
@@ -9,14 +10,14 @@
 		color: #fff;
 	}
 	&__body {
-		max-width: 600px;
+		max-width: 700px;
 	}
 	// .promo__suptitle
 	&__suptitle {
 		color: #fff;
 		text-align: left;
 		padding-left: 10px;
-		margin-bottom: 13px;
+		margin-bottom: 17px;
 		&::after {
 			left: 0;
 			transform: unset;
@@ -32,7 +33,7 @@
 			display: none;
 		}
 		&:not(:last-child) {
-			margin-bottom: 35px;
+			margin-bottom: 25px;
 		}
 	}
 	// .promo__action
@@ -69,49 +70,46 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	@media (min-width: 1360px) {
-		// .promo__panel
-		&__panel {
+
+	// .promo__panel
+	&__panel {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		&:not(:last-child) {
+			margin-bottom: 35px;
+		}
+	}
+	// .promo__text
+	&__text {
+		position: relative;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		padding-right: 85px;
+		&::before {
+			content: "";
 			position: absolute;
-			left: -90px;
-			top: 364px;
-			color: #fff;
-			display: flex;
-			align-items: center;
-			column-gap: 15px;
-			z-index: 2;
-			transform: rotate(-90deg);
+			top: 50%;
+			right: 0;
+			width: 70px;
+			height: 2px;
+			background-color: #fff;
+			transform: translateY(-50%);
 		}
-		// .promo__text
-		&__text {
-			position: relative;
-			color: #fff;
-			font-size: 16px;
-			font-weight: 700;
-			padding-right: 85px;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 50%;
-				right: 0;
-				width: 70px;
-				height: 2px;
-				background-color: #fff;
-				transform: translateY(-50%);
-			}
-		}
-		// .promo__social
-		&__social {
-			display: flex;
-			column-gap: 15px;
-		}
-		// .promo__item
-		&__item {
-			transition: transform 0.3s ease 0s;
-			@media (any-hover: hover) {
-				&:hover {
-					transform: scale(1.2);
-				}
+	}
+	// .promo__social
+	&__social {
+		display: flex;
+		column-gap: 15px;
+	}
+	// .promo__item
+	&__item {
+		transition: transform 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.2);
 			}
 		}
 	}
