@@ -104,8 +104,9 @@
 		display: flex;
 		column-gap: 15px;
 	}
-	// .promo__item
-	&__item {
+	// .promo__link-social
+	&__link-social {
+		display: inline-block;
 		transition: transform 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
@@ -452,6 +453,7 @@
 	}
 	// .contacts__social
 	&__social {
+		display: inline-block;
 		transition: all 0.4s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
@@ -459,15 +461,14 @@
 			}
 		}
 	}
-	// .contacts__links
-	&__links {
-		display: flex;
-		flex-direction: column;
-	}
-	// .contacts__link
-	&__link {
+	// .contacts__item-contact
+	&__item-contact {
 		&:not(:last-child) {
 			margin-bottom: 7px;
 		}
+	}
+	// .contacts__link
+	&__link {
+		letter-spacing: 0.7px;
 	}
 }

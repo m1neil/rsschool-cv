@@ -307,7 +307,8 @@ h6 {
      -moz-column-gap: 15px;
           column-gap: 15px;
 }
-.promo__item {
+.promo__link-social {
+  display: inline-block;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
@@ -315,7 +316,7 @@ h6 {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 @media (any-hover: hover) {
-  .promo__item:hover {
+  .promo__link-social:hover {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
@@ -653,6 +654,7 @@ h6 {
   gap: 15px;
 }
 .contacts__social {
+  display: inline-block;
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -664,15 +666,9 @@ h6 {
             transform: scale(1.2);
   }
 }
-.contacts__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.contacts__link:not(:last-child) {
+.contacts__item-contact:not(:last-child) {
   margin-bottom: 7px;
+}
+.contacts__link {
+  letter-spacing: 0.7px;
 }
