@@ -1,0 +1,40 @@
+// Заголовки, общие БЄМ блоки и проче...
+.suptitle {
+	position: relative;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	padding-top: 11px;
+	text-align: center;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+		background-color: $elementColor;
+		z-index: -1;
+	}
+}
+.title {
+	position: relative;
+	color: #000;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: math.div(45, 36);
+	padding-bottom: 32px;
+	text-align: center;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 3px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $elementColor;
+	}
+}
